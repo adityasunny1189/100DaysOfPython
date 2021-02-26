@@ -1,2 +1,2 @@
 # 100DaysOfPython
-100 Days of code in python
+1. Basics Of Python
