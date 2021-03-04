@@ -13,7 +13,6 @@ error_count = 0
 
 
 def print_hangman(error_count, game_not_over):
-	print("Inside print hangman function")
 	if error_count == 1:
 		print('''
 			 +---------+
@@ -105,3 +104,6 @@ def check_new_input(word, cur_index, error_count, game_not_over):
 while game_not_over:
 	word = input("Enter the word: ")
 	cur_index, error_count, game_not_over = check_new_input(word, cur_index, error_count, game_not_over)
+	if cur_index == len(index_empty):
+		game_not_over = False
+		print("WINNER")
