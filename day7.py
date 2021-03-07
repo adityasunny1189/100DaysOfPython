@@ -1,16 +1,15 @@
 # Hangman game
-
-char_to_guess = "Global Warming"
-char_on_display = "G_o_a_ W_r_in_"
-index_empty = [1, 3, 5, 8, 10, 13]
-
+import random
 
 print("Hangman Game")
-print(char_on_display)
-
-game_not_over = True
+words_collection = ["cat", "Global Warming", "india"]
+char_to_guess = words_collection[random.randint(0, len(words_collection) - 1)]
+char_on_display = []
+for i in char_to_guess:
+	char_on_display += '_'
 error_count = 0
-
+game_not_over = True
+print(char_on_display)
 
 def print_hangman(error_count, game_not_over):
 	if error_count == 1:
@@ -91,19 +90,16 @@ def print_hangman(error_count, game_not_over):
 	return game_not_over
 
 
-cur_index = 0
-
-def check_new_input(word, cur_index, error_count, game_not_over):
-	if char_to_guess[index_empty[cur_index]] != word:
+while game_not_over:
+	guess = input("Enter a letter: ")
+	for position in range(len(char_to_guess)):
+		cur_letter = char_to_guess[position]
+		if guess == cur_letter:
+			char_on_display[position] = guess
+	print(char_on_display)
+	if "_" not in char_on_display:
+		game_not_over = False
+		print("You Won")
+	if guess not in char_to_guess:
 		error_count += 1
 		game_not_over = print_hangman(error_count, game_not_over)
-	else:
-		cur_index += 1
-	return cur_index, error_count, game_not_over
-
-while game_not_over:
-	word = input("Enter the word: ")
-	cur_index, error_count, game_not_over = check_new_input(word, cur_index, error_count, game_not_over)
-	if cur_index == len(index_empty):
-		game_not_over = False
-		print("WINNER")
