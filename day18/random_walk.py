@@ -2,20 +2,18 @@ from turtle import Turtle, Screen
 import random
 
 tim = Turtle()
-tim.shape("turtle")
-tim.color("grey")
-
+tim.pensize(15)
 color_list = ["red", "blue", "green", "black", "yellow", "orange", "coral"]
 
-for i in range(3, 11):
+direction = [0, 90, 180, 270]
+def random_walk(dis):
 	tim.pencolor(color_list[random.randint(0, len(color_list) - 1)])
-	tim.fillcolor(color_list[random.randint(0, len(color_list) - 1)])
-	for j in range(i):
-		tim.forward(100)
-		tim.left(360/i)
+	tim.forward(50)
+	tim.setheading(dis)
 
-
-
+for i in range(100):
+	d = direction[random.randint(0, len(direction) - 1)]
+	random_walk(d)
 
 screen = Screen()
 screen.exitonclick()
