@@ -11,7 +11,7 @@ def button_clicked():
 heading_1 = Label(text = "Heading 1", font = ("Arial", 40, "bold"))
 heading_1.pack()
 
-button = Button(text = "click me", command = button_clicked)
+button = Button(text = "click me", side = "left" command = button_clicked)
 button.pack()
 
 user_input = Entry()
