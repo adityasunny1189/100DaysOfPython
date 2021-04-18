@@ -22,4 +22,9 @@ def missing_char(string):
     return -1
 
 
-print(missing_char('aditya'))
+def palindrom_string(string):
+    return string == string[::-1]
+
+
+# print(missing_char('aditya'))
+print(palindrom_string('baba'))
