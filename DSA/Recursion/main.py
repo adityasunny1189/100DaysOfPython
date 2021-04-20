@@ -120,6 +120,62 @@ def fast_power_calc(a: int, n: int) -> int:
     return a * fast_power_calc(a, n//2) ** 2
 
 
+def tower_of_hanoi(n: int, A: str, B: str, C: str) -> None:
+    if n == 1:
+        print(f"Move {n}th disc from {A} to {C}")
+        return
+    tower_of_hanoi(n-1, A, C, B)
+    print(f"Move {n}th disc from {A} to {C}")
+    tower_of_hanoi(n-1, B, A, C)
+
+
+def josephus_problem(n: int, k: int) -> int:
+    if n == 1:
+        return 0
+    return (josephus_problem(n-1, k) + k) % n
+
+
+def remove(S):
+    if len(S) == 1:
+        return S
+    if S[0] == S[1]:
+        i = 0
+        while (i + 1) < len(S) and S[i] == S[i + 1]:
+            i += 1
+        if (i + 1) >= (len(S)):
+            return ''
+        return remove(S[i+1:])
+    elif S[0] != S[-1]:
+        return S[0] + remove(S[1:])
+    return remove(S[0] + remove(S[1:]))
+
+
+def square_root(n):
+    if n == 1:
+        return 1
+    ans = n // 2
+    prev = 1
+    while ans * ans > n:
+        if ans * ans == n:
+            return ans
+        prev = ans
+        ans = ans // 2
+
+    while ans < prev:
+        ans += 1
+        if ans * ans < n:
+            continue
+        if ans * ans == n:
+            return ans
+        else:
+            return ans - 1
+    return ans
+
+
+print(square_root(8))
+print(square_root(6))
+print(square_root(100))
+print(square_root(11))
 
 
 
@@ -131,6 +187,9 @@ def fast_power_calc(a: int, n: int) -> int:
 
 
 
+
+# print(remove('geeksforgeeks'))
+# tower_of_hanoi(6, 'A', 'B', 'C')
 # print(fast_power_calc(4,8))
 # print(fast_power_calc(4,3))
 # print(return_all_index_of_key([1, 2, 3, 4, 3, 2, 1], 3, []))
