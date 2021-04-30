@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="POST" action="">
+        <input  name="text_editor">
+        <input type="submit">
+    </form>
+    <div>
+        <div class="output">
+            <h3>Output</h3>
+            {% for i in output %}
+                {{ i }}
+            {% endfor %}
+        </div>
+        <div class="error">
+            <h3>Error</h3>
+            {{ error }}
+        </div>
+    </div>
+</body>
+</html>
