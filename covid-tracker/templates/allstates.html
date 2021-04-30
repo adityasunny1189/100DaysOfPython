@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <table>
+    <tr>
+      <th>States</th>
+      <th>Cases</th>
+      <th>Deaths</th>
+    </tr>
+      {% for i in regional_data_list %}
+        <tr>
+          <td><a href="{{ url_for('covid_case', state=i['loc']) }}">{{ i['loc'] }}</a></td>
+          <td>{{ i['totalConfirmed'] }}</td>
+          <td>{{ i['deaths'] }}</td>
+        </tr>
+      {% endfor %}
+  </table>
+{% endblock %}
