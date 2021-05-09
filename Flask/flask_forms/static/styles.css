@@ -1,0 +1,8 @@
+.navbar-url {
+    margin: 10px;
+    color: white;
+}
+
+.navbar-url:hover {
+    color: seashell;
+}
