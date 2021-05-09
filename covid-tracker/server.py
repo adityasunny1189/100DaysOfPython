@@ -19,7 +19,7 @@ def home():
                 return render_template('statedata.html', data=i)
         return render_template('state.html')
     else:
-        return render_template('index.html', state_input=state_input)
+        return render_template('index.html')
 
 
 @app.route('/<state>')
