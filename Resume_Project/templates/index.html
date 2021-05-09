@@ -1,0 +1,10 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block content %}
+
+  <div class="jumbotron container">
+    <h1>Create your own resume in easy steps</h1>
+    <button class="success"><a href="{{ url_for('fill_form') }}">click me</a></button>
+  </div>
+
+{% endblock %}
