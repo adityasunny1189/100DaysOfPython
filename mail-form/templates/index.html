@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Mail</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mail Service</h1>
+    </header>
+    <div class="container form-div jumbotron">
+        <h3>Send mail to multiple email at a time.</h3>
+        <form method="post", action="">
+            <input class="input-box" name="sender_email", type="email" placeholder="From Email"><br>
+            <input class="input-box" name="receiver_email", type="text" placeholder="To Emails(email1 email2 ...)"><br>
+            <input class="input-box" name="sender_password", type="password" placeholder="Password"><br>
+            <input class="input-box" name="subject" placeholder="Subject"><br>
+            <textarea class="input-box" name="message" placeholder="Message"></textarea><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
