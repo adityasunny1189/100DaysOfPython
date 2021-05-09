@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithm Visualiser</title>
+    <style>
+      span {
+        margin: 0;
+        border: 2px solid black;
+      }
+      .form-div {
+        margin: 20px;
+      }
+      .linear-search {
+        margin: 20px;
+      }
+      .array {
+        margin: 20px;
+      }
+    </style>
+</head>
+<body>
+  <div class="form-div">
+    <form method="post", action="">
+      <input name="position" placeholder="Position" type="number">
+      <input name="value" placeholder="Value" type="number">
+      <input type="submit">
+    </form>
+  </div>
+  <div class="array">
+    {% for element in arr %}
+      <span>{{ element }}</span>
+    {% endfor %}
+  </div>
+<!--  <div class="linear-search">-->
+<!--    <form method="post", action="">-->
+<!--      <input type="number" name="element" placeholder="Element">-->
+<!--      <input type="submit">-->
+<!--    </form>-->
+<!--  </div>-->
+</body>
+</html>
