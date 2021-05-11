@@ -1,0 +1,13 @@
+{% extends 'bootstrap/base.html' %}
+{% include 'nav.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <div class="container jumbotron">
+        <h1>Welcome to cafe and paradise</h1>
+        <button><a href="{{ url_for('add_cafe') }}">Add Cafe</a></button>
+    </div>
+{% endblock %}

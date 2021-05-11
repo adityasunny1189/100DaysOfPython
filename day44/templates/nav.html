@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="static/styles.css">
+{% endblock %}
+
+{% block scripts %}
+  <script src="static/script.js"></script>
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <nav class="navbar navbar-light" style="background-color: #343a40;">
+    <span class="navbar-text">
+      <a href="{{ url_for('home') }}">Cafe Paradise</a>
+      <a href="{{ url_for('show_cafes') }}">Cafe List</a>
+    </span>
+  </nav>
+{% endblock %}

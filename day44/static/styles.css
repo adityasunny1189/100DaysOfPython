@@ -1,0 +1,27 @@
+a {
+    color: white;
+}
+
+.form-div {
+    padding: 20px;
+    background-color: seashell;
+    width: 500px ! important;
+    margin-left: 50px ! important;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+  text-align: center;
+}
+
+th, td {
+    height: 50px;
+    width: 120px;
+}
+
+th {
+    text-align: center ! important;
+}

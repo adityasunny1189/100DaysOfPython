@@ -1,0 +1,6 @@
+cafe_name,cafe_location,opening_time,closing_time,coffee_rating,wifi_strength,no_of_sockets
+Cafe 1,Darbhanga,09:00:00,12:00:00,4,5,7
+Cafe 2,Delhi,07:00:00,02:00:00,5,3,2
+Cafe 3,Tumkur,06:00:00,09:00:00,9,8,6
+Coffee Cafe Day,Bengaluru,10:00:00,08:00:00,9,9,12
+AP Palace,Bihar,08:00:00,04:00:00,7,3,4

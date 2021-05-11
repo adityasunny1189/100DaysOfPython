@@ -1,0 +1,33 @@
+{% extends 'bootstrap/base.html' %}
+{% include 'nav.html' %}
+
+{% block title %}
+    Cafe List
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <table>
+            <tr>
+                <th>Cafe Name</th>
+                <th>Cafe Loc</th>
+                <th>Opening Time</th>
+                <th>Closing Time</th>
+                <th>Coffee Rating</th>
+                <th>Wifi Strength</th>
+                <th>No of Sockets</th>
+            </tr>
+            {% for cafe in cafe_list %}
+                <tr>
+                    <td>{{ cafe['cafe_name'] }}</td>
+                    <td>{{ cafe['cafe_location'] }}</td>
+                    <td>{{ cafe['opening_time'] }} AM</td>
+                    <td>{{ cafe['closing_time'] }} PM</td>
+                    <td>{{ cafe['coffee_rating'] }}</td>
+                    <td>{{ cafe['wifi_strength'] }}</td>
+                    <td>{{ cafe['no_of_sockets'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
